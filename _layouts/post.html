@@ -31,16 +31,28 @@ layout: base
     {{ content }}
   </div>
   <div class="col col-lg-4">
+    <ul>
     {% if page.web %}
-      <p>
-        <a href="{{ page.web }}">Web site</a>
-      </p>
+      <li>
+        <a href="{{ page.web }}">{{ page.name }} on the Web</a>
+      </li>
+    {% endif %}
+    {% if page.github %}
+      <li>
+        <a href="{{ page.github }}">{{ page.name }} on GitHub</a>
+      </li>
     {% endif %}
     {% if page.twitter %}
-      <p>
-        <a href="{{ page.twitter }}">Twitter</a>
-      </p>
+      <li>
+        <a href="https://twitter.com/{{ page.twitter }}">{{ page.name }} on Twitter</a>
+      </li>
     {% endif %}
+    {% if page.tweet %}
+      <li>
+        <a href="{{ page.tweet }}">{{ page.name }} Announcement Tweet</a>
+      </li>
+    {% endif %}
+    </ul>
     {% if page.travel %}
       <div class="globe" {% for travel in page.travel %}
         data-lat-{{ forloop.index0 }}="{{ travel.lat }}"
