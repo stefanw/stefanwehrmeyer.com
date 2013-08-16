@@ -1,0 +1,58 @@
+---
+layout: base
+
+---
+
+<div class="row">
+  <div class="col col-lg-12">
+    <h2>
+      <a href=".">{{ page.title }}</a>
+    </h2>
+    <p>
+      <img class="img-rounded" src="/img/blog/{{ page.date|date:"%Y/%m" }}/{% if page.panorama %}{{ page.panorama }}{% else %}{{ page.image }}{% endif %}">
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-lg-12">
+    <p class="lead">
+      {{ page.subtitle }}
+      <small class="pull-right">{{ page.date|date:"%d.%m.%Y" }}</small>
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-lg-8">
+    {% if page.teaser %}
+    <blockquote>
+      <p>{{ page.teaser }}</p>
+    </blockquote>
+    {% endif %}
+    {{ content }}
+  </div>
+  <div class="col col-lg-4">
+    {% if page.web %}
+      <p>
+        <a href="{{ page.web }}">Web site</a>
+      </p>
+    {% endif %}
+    {% if page.twitter %}
+      <p>
+        <a href="{{ page.twitter }}">Twitter</a>
+      </p>
+    {% endif %}
+    {% if page.travel %}
+      <div class="globe" {% for travel in page.travel %}
+        data-lat-{{ forloop.index0 }}="{{ travel.lat }}"
+        data-lng-{{ forloop.index0 }}="{{ travel.lng }}"
+        data-city-{{ forloop.index0 }}="{{ travel.city }}"
+        data-country-{{ forloop.index0 }}="{{ travel.country }}"
+        data-iso3-{{ forloop.index0 }}="{{ travel.iso3 }}"
+        data-from-{{ forloop.index0 }}="{{ travel.from }}"
+        data-to-{{ forloop.index0 }}="{{ travel.to }}"{% endfor %}>
+      </div>
+    {% endif %}
+  </div>
+</div>

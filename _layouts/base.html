@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head profile="http://www.w3.org/2006/03/hcard">
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet" />
+
+        <title>Stefan Wehrmeyer</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="Stefan Wehrmeyer" />
+        <meta name="description" content="Stefan Wehrmeyer Homepage Projects Blog Contact Details and Information" />
+
+        <link rel="openid.server" href="http://www.myopenid.com/server" />
+        <link rel="openid.delegate" href="http://stefanwehrmeyer.myopenid.com/"/>
+
+        <link rel="shortcut icon" type="image/png" href="/img/favicon.png" >
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="navbar">
+                <h1 class="navbar-brand">
+                    <a href="/" title="Stefan Wehrmeyer's Homepage">
+                        Stefan Wehrmeyer
+                    </a>
+                </h1>
+
+                <ul class="nav navbar-nav pull-right">
+                  <li><a href="/projects/">Projects</a></li>
+                  <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+
+            {{ content }}
+
+            <footer class="footer">
+                <div class="row">
+                    <div class="col col-6 col-sm-12 col-lg-5">
+                        <img class="photo" src="/img/stefan_wehrmeyer.jpg" alt="Stefan Wehrmeyer"/>
+                    </div>
+                    <div class="col col-6 col-sm-12 col-lg-5">
+                        <p class="lead">
+                            I am Stefan Wehrmeyer.
+                        </p>
+                        <p>
+                            I live in <strong>Berlin</strong>, study for my Master's degree in IT-Systems Engineering and work for the <strong>Open Knowledge Foundation Germany</strong>.
+                        </p>
+                        <p>
+                            <a href="https://github.com/stefanw" class="btn btn-default">
+                                GitHub
+                            </a>
+                            <a href="http://twitter.com/stefanwehrmeyer" class="btn btn-default" >
+                                Twitter
+                            </a>
+                        </p>
+
+                        <address id="contact" class="well well-small">
+                            <small>
+                                Impressum:
+                                <span class="street-address">Leinestr. 33</span>,
+                                <span class="postal-code">12049</span> <span class="locality">Berlin</span>,
+                                <span class="country-name">Germany</span>,
+                                <a class="email" title="E-Mail Stefan Wehrmeyer" href="mailto:mail@stefanwehrmeyer.com">mail@stefanwehrmeyer.com</a>,
+                                <span class="tel"><a class="value" rel="cell" href="tel:+4915115550559">+4915115550559</a></span>, <a href="StefanWehrmeyer.vcf">vCard</a>
+                            </small>
+                        </address>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="/js/lib/jquery.min.js"></script>
+        <script src="/js/lib/d3.v3.min.js"></script>
+        <script src="/js/lib/topojson.min.js"></script>
+        <script src="/js/script.js"></script>
+    </body>
+</html>

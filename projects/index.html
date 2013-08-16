@@ -1,0 +1,19 @@
+---
+layout: default
+title: Projects Stefan Wehrmeyer
+
+---
+
+<div class="row">
+  <div class="col col-lg-12">
+    <h2>Projects</h2>
+  </div>
+</div>
+
+<div class="row">
+
+  {% for post in site.tags.project %}
+      {% include project.html %}
+  {% endfor %}
+
+</div>

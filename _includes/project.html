@@ -1,0 +1,12 @@
+<div class="col col-lg-12 project">
+  <h3>
+    <a href="{{ post.url }}">{{ post.name }}</a>
+    <small>{{ post.title }}</small>
+  </h3>
+  <p class="lead">{{ post.teaser }}</p>
+  <div class="project-frame">
+    <a href="{{ post.url }}" class="thumbnail">
+      <img class="project-image" src="/img/blog/{{ post.date|date:"%Y/%m" }}/{{ post.image }}" alt="{{ post.name }} Screenshot"/>
+    </a>
+  </div>
+</div>

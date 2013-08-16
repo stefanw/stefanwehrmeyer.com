@@ -1,0 +1,48 @@
+---
+layout: default
+
+---
+<div class="row">
+  <div class="col col-lg-12">
+    <h2>Blog</h2>
+  </div>
+</div>
+
+<div class="row">
+  {% for post in site.posts %}
+    <div class="col {% if post.tags contains "featuredproject" or post.tags contains "panorama" %}col-lg-12{% else %}col-lg-6{% endif %}">
+      <h3>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h3>
+      <a class="thumbnail" href="{{ post.url }}">
+        <img class="media-object" src="/img/blog/{{ post.date|date:"%Y/%m" }}/{{ post.image }}">
+      </a>
+      <div class="caption">
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="row">
+  <div class="col col-lg-6">
+    <ul class="pagination">
+      {% if paginator.previous_page %}
+        <li>
+          {% if paginator.previous_page == 1 %}
+            <a href="/">&laquo;</a>
+          {% else %}
+            <a href="{{ paginator.previous_page_path }}">&laquo;</a>
+          {% endif %}
+        </li>
+      {% endif %}
+
+      {% if paginator.next_page %}
+        <li>
+          <a href="{{ paginator.next_page_path }}">&raquo;</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

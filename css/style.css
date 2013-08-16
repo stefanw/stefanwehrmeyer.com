@@ -1,0 +1,94 @@
+body {
+    background:#f6f6f6;/* #dfdfdf;*/
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-brand {
+    color: #68BF4C;
+    font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0;
+    padding-left: 5px;
+    max-width: none;
+    font-size: 38px;
+    line-height: 44px;
+}
+
+.navbar-brand a {
+  color: #68BF4C;
+}
+
+.btn-default, .btn-default:hover {
+  color: #f6f6f6;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+  color: #68BF4C;
+  text-decoration: none;
+}
+
+.thumbnail {
+  border: 0;
+}
+
+a.thumbnail:hover, a.thumbnail:focus {
+  border-color: #68BF4C;
+}
+
+.project {
+  margin-bottom: 3em;
+}
+
+.project-frame {
+  overflow: hidden;
+}
+
+.project-image {
+    -webkit-transform: translate(0, 0) scale(1.0);
+    transition: all 1s ease-in-out;
+}
+
+.project:hover .project-image {
+    -webkit-transform: translate(0, 0) scale(1.25);
+    transition: all 3s ease-in-out;
+}
+
+.project-description {
+  padding-top: 1em;
+  padding-bottom: 15em;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.9);
+}
+
+.globe {
+  min-height: 480px;
+}
+
+.travel-description {
+  padding-top: 1em;
+  padding-bottom: 15em;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  padding-top: 2em;
+}
+
+
+/* Geo */
+.country-boundary {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+
+.country {
+  fill: #fff;
+}

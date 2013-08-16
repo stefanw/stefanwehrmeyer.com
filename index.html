@@ -1,0 +1,17 @@
+---
+layout: default
+title: Stefan Wehrmeyer
+
+---
+
+<div class="row">
+  {% for post in site.tags.featuredproject %}
+    <div class="col col-lg-4">
+      <p>
+        <a href="{{ post.url }}">
+          <img src="/img/blog/{{ post.date|date:"%Y/%m" }}/{{ post.image }}"/>
+        </a>
+      </p>
+    </div>
+  {% endfor %}
+</div>
