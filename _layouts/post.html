@@ -8,9 +8,7 @@ layout: base
     <h2>
       <a href=".">{{ page.title }}</a>
     </h2>
-    <p>
-      <img class="img-rounded" src="/img/blog/{{ page.date|date:"%Y/%m" }}/{% if page.panorama %}{{ page.panorama }}{% else %}{{ page.image }}{% endif %}">
-    </p>
+    <img class="img-responsive img-rounded" src="/img/blog/{{ page.date|date:"%Y/%m" }}/{% if page.panorama %}{{ page.panorama }}{% else %}{{ page.image }}{% endif %}">
   </div>
 </div>
 
