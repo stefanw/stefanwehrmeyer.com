@@ -8,8 +8,20 @@ layout: default
   </div>
 </div>
 
-<div class="row">
-  {% for post in site.posts %}
+{% assign colcount = 0 %}
+{% for post in site.posts %}
+  {% if post.tags contains "featuredproject" or post.tags contains "panorama" %}
+    {% if colcount == 1 %}
+        </div>
+    {% endif %}
+    <div class="row">
+    {% assign colcount = 0 %}
+  {% else %}
+    {% if colcount == 0 %}
+      <div class="row">
+    {% endif %}
+    {% assign colcount = colcount|plus:1 %}
+  {% endif %}
     <div class="col {% if post.tags contains "featuredproject" or post.tags contains "panorama" %}col-lg-12{% else %}col-lg-6{% endif %}">
       <h3>
         <a href="{{ post.url }}">
@@ -22,8 +34,15 @@ layout: default
       <div class="caption">
       </div>
     </div>
-  {% endfor %}
-</div>
+  {% if post.tags contains "featuredproject" or post.tags contains "panorama" %}
+    </div>
+  {% else %}
+    {% if colcount == 2 %}
+      {% assign colcount = 0 %}
+      </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
 <div class="row">
   <div class="col col-lg-6">
