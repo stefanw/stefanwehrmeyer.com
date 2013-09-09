@@ -14,4 +14,8 @@ tags:
 
 Bundes-Git (Federal Git) is a Git repository of all Federal laws and regulations. I basically tried to version-control the laws after they were published which is more complicated that it sounds for various reasons. [Here's a talk I gave at Git Merge about Bundes-Git](http://www.youtube.com/watch?v=-qql1Ess7qM).
 
-The tool as such never took off beyond the usual crowd. At least some pull requests by the pirate party. But the concept resonated with many people. The Bundes-Git OctoEagle logo and the strategically reserved GitHub organizations "bundestag" and "bundesregierung" apparently made some believe that it's actually the German Parliament who's doing this. It's not, but if they ever want to use GitHub, I will surely add them to the organization!
+As a tool Bundes-Git never made really made it far. Some digital activists and the German Pirate Party made pull requests to the laws and we collected some issues. I still believe that as a versioning tool for laws Bundes-Git has potential, it just needs a better interface than Git (possibly something like [prose.io](http://prose.io/)).
+
+However, the concept of versioning laws like software and transparently collaborating on changes resonated with many people. Bundes-Git is the vision of a future parliament that is more digital and open.
+
+The Bundes-Git OctoEagle logo and the strategically reserved GitHub organizations "bundestag" and "bundesregierung" apparently made some people believe that it's actually the German Parliament who's doing this. It's not, but if they ever want to use GitHub, I will surely add them to the organization!
