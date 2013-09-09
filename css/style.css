@@ -23,10 +23,6 @@ body {
   font-size: 20px;
 }
 
-.btn-default, .btn-default:hover {
-  color: #f6f6f6;
-}
-
 a {
     color: #333;
 }

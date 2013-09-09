@@ -4,7 +4,7 @@ layout: base
 ---
 
 <div class="row">
-  <div class="col col-lg-12">
+  <div class="col-lg-12">
     <h2>
       <a href=".">{{ page.title }}</a>
     </h2>
@@ -13,7 +13,7 @@ layout: base
 </div>
 
 <div class="row">
-  <div class="col col-lg-12">
+  <div class="col-lg-12">
     <p class="lead">
       {{ page.subtitle }}
       <small class="pull-right">{{ page.date|date:"%d.%m.%Y" }}</small>
@@ -22,7 +22,7 @@ layout: base
 </div>
 
 <div class="row">
-  <div class="col col-lg-8">
+  <div class="col-md-8 col-lg-8">
     {% if page.teaser %}
     <blockquote>
       <p>{{ page.teaser }}</p>
@@ -30,7 +30,7 @@ layout: base
     {% endif %}
     {{ content }}
   </div>
-  <div class="col col-lg-4">
+  <div class="col-md-4 col-lg-4">
     <ul>
     {% if page.web %}
       <li>
