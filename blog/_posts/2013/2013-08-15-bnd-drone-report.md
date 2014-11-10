@@ -5,8 +5,7 @@ subtitle: Flying a drone at a protest march
 image: bnd-drone-report.png
 name: A Walk along the new BND Headquarters
 web: http://stefanwehrmeyer.com/projects/bnd-demo/
-tags:
- - panorama
+
 ---
 
 This summer I bought an [AR parrot drone](http://ardrone2.parrot.com/).
