@@ -1,0 +1,97 @@
+---
+---
+
+$size-sm: 35.5em;
+$size-md: 48em;
+
+$base: #A9846E;
+$lighter: #EBD8CD;
+$highlight: #6E915F;
+$contrast: #88909A;
+$contrast-dark: #4C5B6F;
+
+body {
+    background: $contrast-dark;
+    hyphens: auto;
+    font-size: 20px;
+}
+
+a {
+  color: $highlight;
+  text-decoration: none;
+  &:hover {
+    color: $highlight;
+    text-decoration: underline;
+  }
+
+}
+
+.homepage-header {
+  overflow: hidden;
+  position: relative;
+  background-image: url('../img/stefan_wehrmeyer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 33%;
+  height: 40vh;
+
+  // .header h1 {
+  //   text-shadow:
+  //     -1px -1px 3px $contrast,
+  //     1px -1px 3px $contrast,
+  //     -1px 1px 3px $contrast,
+  //     1px 1px 3px $contrast;
+  // }
+}
+
+.homepage-content {
+  position: relative;
+  background-color: $lighter;
+}
+
+.content {
+  padding: 2em;
+}
+
+.footer {
+  width: 100%;
+  background-color: $contrast;
+  color: $contrast-dark;
+
+  a {
+    color: $contrast-dark;
+    text-decoration: underline;
+    &:hover {
+      color: $contrast-dark;
+    }
+  }
+
+  section {
+    padding: 1em 2em;
+  }
+
+  aside {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: $size-sm) {
+  .homepage-header .header h1 {
+    text-shadow: none;
+  }
+}
+
+@media screen and (min-width: $size-md) {
+  .homepage-header {
+    height: 100vh;
+  }
+
+  .homepage-content {
+    height: 100vh;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
