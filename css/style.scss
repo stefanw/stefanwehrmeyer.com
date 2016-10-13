@@ -34,14 +34,6 @@ a {
   background-size: cover;
   background-position: 75% 20%;
   height: 40vh;
-
-  // .header h1 {
-  //   text-shadow:
-  //     -1px -1px 3px $contrast,
-  //     1px -1px 3px $contrast,
-  //     -1px 1px 3px $contrast,
-  //     1px 1px 3px $contrast;
-  // }
 }
 
 .homepage-content {
@@ -51,6 +43,11 @@ a {
 
 .content {
   padding: 2em;
+
+  p {
+    max-width: 750px;
+    line-height: 26px;
+  }
 }
 
 .footer {
