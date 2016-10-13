@@ -29,7 +29,7 @@ layout: default
         </a>
       </h3>
       <a class="thumbnail" href="{{ post.url }}">
-        <img class="media-object" src="/img/blog/{{ post.date|date:"%Y/%m" }}/{{ post.image }}">
+        <img class="img-responsive" src="/img/blog/{{ post.date|date:"%Y/%m" }}/{{ post.image }}">
       </a>
     </div>
   {% if post.tags contains "featuredproject" or post.tags contains "panorama" %}
