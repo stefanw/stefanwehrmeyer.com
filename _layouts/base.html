@@ -1,79 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head profile="http://www.w3.org/2006/03/hcard">
+    <head>
         <meta charset="utf-8">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link href="{{ site.baseurl }}css/bootstrap.min.css" rel="stylesheet">
-        <link href="{{ site.baseurl }}css/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Stefan Wehrmeyer</title>
+
+        <link href="{{ site.baseurl }}css/pure-min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="{{ site.baseurl }}css/grids-responsive-min.css">
+        <link href="{{ site.baseurl }}css/style.css" rel="stylesheet" />
+
+        <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}img/favicon.png" >
+
         <meta name="robots" content="index, follow" />
         <meta name="description" content="Stefan Wehrmeyer Homepage, Projects, Blog and Contact Details" />
 
         <link rel="openid2.provider" href="https://openid.stackexchange.com/openid/provider">
         <link rel="openid2.local_id" href="https://openid.stackexchange.com/user/918b09ff-03a4-4df3-8f87-31f3ae081a85">
-
-        <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}img/favicon.png" >
     </head>
     <body>
-        <div class="container">
 
-            <div class="navbar">
-                <h1 class="navbar-brand">
-                    <a href="{{ site.baseurl }}" title="Stefan Wehrmeyer's Homepage">
-                        Stefan Wehrmeyer
-                    </a>
-                </h1>
+      {{ content }}
 
-                <ul class="nav navbar-nav pull-right">
-                  <li><a href="{{ site.baseurl }}projects/">Projects</a></li>
-                  <li><a href="{{ site.baseurl }}blog/">Blog</a></li>
-                </ul>
-            </div>
-
-            {{ content }}
-
-            <footer class="footer">
-                <div class="row">
-                    <div class="col-md-4 col-lg-3">
-                        <img class="img-responsive photo" src="{{ site.baseurl }}img/stefan_wehrmeyer.jpg" alt="Stefan Wehrmeyer"/>
-                        <small>Photo by <a href="http://arduina.net/">Fotografiona</a></small>
-                    </div>
-                    <div class="col-md-8 col-lg-9">
-                        <p class="lead">
-                            Hi, I'm Stefan Wehrmeyer.
-                        </p>
-                        <p>
-                            I'm a data journalist, software engineer and activist working for <a href="https://www.correctiv.org/">Correctiv</a> and with the <a href="http://www.okfn.de/">Open Knowledge Foundation Germany</a> in Berlin.
-                        </p>
-                        <p>
-                            <a href="https://github.com/stefanw" class="btn btn-default">
-                                GitHub
-                            </a>
-                            <a href="https://twitter.com/stefanwehrmeyer" class="btn btn-default" >
-                                Twitter
-                            </a>
-                        </p>
-
-                        <address id="contact" class="well well-small">
-                            <small>
-                                Impressum:
-                                <span class="street-address">Leinestr. 33</span>,
-                                <span class="postal-code">12049</span> <span class="locality">Berlin</span>,
-                                <span class="country-name">Germany</span>,
-                                <br/>
-                                <a class="email" title="E-Mail Stefan Wehrmeyer" href="mailto:mail@stefanwehrmeyer.com">mail@stefanwehrmeyer.com</a> (<a href="{{ site.baseurl }}publickey.asc" title="07C9226790B49716">Public Key</a>)
-                            </small>
-                        </address>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <script src="{{ site.baseurl }}js/lib/jquery.min.js"></script>
-        <script src="{{ site.baseurl }}js/lib/d3.v3.min.js"></script>
-        <script src="{{ site.baseurl }}js/lib/topojson.min.js"></script>
-        <script src="{{ site.baseurl }}js/script.js"></script>
     </body>
 </html>
