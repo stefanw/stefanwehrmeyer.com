@@ -3,6 +3,8 @@
 
 $size-sm: 35.5em;
 $size-md: 48em;
+$min-height: 768px;
+$min-height-1: 767px;
 
 $base: #A9846E;
 $lighter: #EBD8CD;
@@ -72,11 +74,6 @@ a {
   }
 }
 
-@media screen and (min-width: $size-sm) {
-  .homepage-header .header h1 {
-    text-shadow: none;
-  }
-}
 
 @media screen and (min-width: $size-md) {
   .homepage-header {
@@ -86,9 +83,21 @@ a {
   .homepage-content {
     height: 100vh;
   }
+}
 
-  .footer {
-    position: absolute;
-    bottom: 0;
+@media screen and (min-width: $size-md) and (max-height: $min-height-1) {
+  .homepage-header {
+    height: auto;
   }
+
+  .homepage-content {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: $size-md) and (min-height: $min-height) {
+    .footer {
+      position: absolute;
+      bottom: 0;
+    }
 }
