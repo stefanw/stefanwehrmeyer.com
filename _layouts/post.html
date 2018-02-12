@@ -1,68 +1,32 @@
 ---
-layout: base
+layout: default
 
 ---
 
-<div class="row">
-  <div class="col-lg-12">
-    <h2>
-      <a href=".">{{ page.title }}</a>
-    </h2>
-    <img class="img-responsive" src="/img/blog/{{ page.date|date:"%Y/%m" }}/{% if page.panorama %}{{ page.panorama }}{% else %}{{ page.image }}{% endif %}">
-  </div>
+<div class="text-center">
+  <img class="img-fluid" src="/static/img/blog/{{ page.date|date:"%Y/%m" }}/{% if page.panorama %}{{ page.panorama }}{% else %}{{ page.image }}{% endif %}" alt="{{ page.image_alt }}">
 </div>
 
-<div class="row">
-  <div class="col-lg-12">
-    <p class="lead">
-      {{ page.subtitle }}
-      <small class="pull-right">{{ page.date|date:"%d.%m.%Y" }}</small>
-    </p>
-  </div>
-</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
 
-<div class="row">
-  <div class="col-md-8 col-lg-8">
-    {% if page.teaser %}
-    <blockquote>
-      <p>{{ page.teaser }}</p>
-    </blockquote>
-    {% endif %}
-    {{ content }}
-  </div>
-  <div class="col-md-4 col-lg-4">
-    <ul>
-    {% if page.web %}
-      <li>
-        <a href="{{ page.web }}">{{ page.name }} on the Web</a>
-      </li>
-    {% endif %}
-    {% if page.github %}
-      <li>
-        <a href="{{ page.github }}">{{ page.name }} on GitHub</a>
-      </li>
-    {% endif %}
-    {% if page.twitter %}
-      <li>
-        <a href="https://twitter.com/{{ page.twitter }}">{{ page.name }} on Twitter</a>
-      </li>
-    {% endif %}
-    {% if page.tweet %}
-      <li>
-        <a href="{{ page.tweet }}">{{ page.name }} Announcement Tweet</a>
-      </li>
-    {% endif %}
-    </ul>
-    {% if page.travel %}
-      <div class="globe" {% for travel in page.travel %}
-        data-lat-{{ forloop.index0 }}="{{ travel.lat }}"
-        data-lng-{{ forloop.index0 }}="{{ travel.lng }}"
-        data-city-{{ forloop.index0 }}="{{ travel.city }}"
-        data-country-{{ forloop.index0 }}="{{ travel.country }}"
-        data-iso3-{{ forloop.index0 }}="{{ travel.iso3 }}"
-        data-from-{{ forloop.index0 }}="{{ travel.from }}"
-        data-to-{{ forloop.index0 }}="{{ travel.to }}"{% endfor %}>
-      </div>
-    {% endif %}
+      <h2 class="mt-5 mb-3">
+        <a href=".">{{ page.title }}</a>
+      </h2>
+
+      <small>{{ page.date|date:"%d.%m.%Y" }}</small>
+
+      <p class="lead">
+        {{ page.subtitle }}
+      </p>
+
+      {% if page.teaser %}
+        <blockquote>
+          <p>{{ page.teaser }}</p>
+        </blockquote>
+      {% endif %}
+      {{ content }}
+    </div>
   </div>
 </div>

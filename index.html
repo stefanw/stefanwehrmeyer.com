@@ -1,35 +1,46 @@
 ---
-layout: default
+layout: home
 title: Stefan Wehrmeyer
+menu: home
 
 ---
 
-<div class="pure-g">
+<div class="homepage-container">
 
-  <div class="pure-u-1 pure-u-md-2-5 homepage-header">
+  <div class="homepage-header">
+    <img src="/static/img/stefan_wehrmeyer.jpg" alt="Stefan Wehrmeyer" class="homepage-header-image"/>
   </div>
 
-  <div class="pure-u-1 pure-u-md-3-5 homepage-content">
-    <div class="content">
-      <header class="header">
-        <h1>Hi, I'm Stefan Wehrmeyer.</h1>
-      </header>
-      <p>
-        I'm a software engineer and data activist working with data in journalism.
-      </p>
-      <p>
-        I fight for <a href="https://fragdenstaat.de/">Freedom of Information</a> with the <a href="https://www.okfn.de/">Open Knowledge Foundation Germany</a>.
-      </p>
-      <p>
-        I have worked on <a href="https://github.com/correctiv?utf8=%E2%9C%93&q=-notebook&type=&language=">reproducible data investigations</a> and <a href="https://github.com/correctiv/?utf8=%E2%9C%93&q=correctiv-">database news apps</a>;
-        I'm interested in <a href="http://farmsubsidy.openspending.org/">EU farm subsidies</a> and <a href="https://github.com/mapnificent/mapnificent">public transport data</a>.
-      </p>
+  <div class="homepage-content">
+    {% include nav.html %}
 
-      <p>
-        You can find me on <a href="https://github.com/stefanw">GitHub</a> and <a href="https://twitter.com/stefanwehrmeyer">Twitter</a>.
-      </p>
+    <main class="main">
+      <div class="content">
+        <header class="header">
+          <h1>Hi, I’m Stefan Wehrmeyer.</h1>
+        </header>
+        <p>
+          I’m a software engineer, investigative technologist and data activist.
+        </p>
+        <p>
+          I fight for <a href="https://fragdenstaat.de/">Freedom of Information</a> with the <a href="https://www.okfn.de/">Open Knowledge Foundation Germany</a>.
+        </p>
 
-    </div>
+        <p>
+          Recently I have worked on <a href="https://github.com/correctiv?utf8=%E2%9C%93&q=-notebook&type=&language=">reproducible data investigations</a> and <a href="https://github.com/correctiv/?utf8=%E2%9C%93&q=correctiv-">database news apps</a>.
+        </p>
+
+        <p>
+          You can read more about <a href="/projects/">my projects</a>.
+        </p>
+
+        <p>
+          You can find me on <a href="https://github.com/stefanw">GitHub</a> and <a href="https://twitter.com/stefanwehrmeyer">Twitter</a>.
+        </p>
+
+      </div>
+    </main>
+
     {% include footer.html %}
   </div>
 </div>
