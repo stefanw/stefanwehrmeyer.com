@@ -9,4 +9,4 @@ tags:
 ---
 
 The Berlin senate of finances approached the Open Knowledge Foundation Germany about a budget visualization.
-After some initial data negotiations, I put up an [OpenSpending satellite site](http://okfde.github.com/haushaltberlin/) that is ready for embedding into other web pages. This project taught me a lesson about about German local government and their budget.
+After some initial data negotiations, I put up an [OpenSpending satellite site](http://okfde.github.com/haushaltberlin/) that is ready for embedding into other web pages. This project taught me a lesson about German local government and their budget.
