@@ -1,70 +1,26 @@
 ---
-layout: default
+layout: page
+menu: blog
 
 ---
-<div class="row">
-  <div class="col col-lg-12">
-    <h2>Blog</h2>
-  </div>
-</div>
 
-{% assign colcount = 0 %}
+<h2>Blog</h2>
+
+<ul class="list-unstyled">
 {% for post in paginator.posts %}
-  {% if post.tags contains "featuredproject" or post.tags contains "panorama" %}
-    {% if colcount == 1 %}
-        </div>
-    {% endif %}
-    <div class="row">
-    {% assign colcount = 0 %}
-  {% else %}
-    {% if colcount == 0 %}
-      <div class="row">
-    {% endif %}
-    {% assign colcount = colcount|plus:1 %}
-  {% endif %}
-    <div class="col {% if post.tags contains "featuredproject" or post.tags contains "panorama" %}col-lg-12{% else %}col-lg-6{% endif %}">
-      <h3>
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h3>
-      <a class="thumbnail" href="{{ post.url }}">
-        <img class="img-responsive" src="/img/blog/{{ post.date|date:"%Y/%m" }}/{{ post.image }}">
+  <li>
+    <h5>
+      <a href="{{ post.url }}">
+        {{ post.title }}
       </a>
-    </div>
-  {% if post.tags contains "featuredproject" or post.tags contains "panorama" %}
-    </div>
-  {% else %}
-    {% if colcount == 2 %}
-      {% assign colcount = 0 %}
-      </div>
-    {% endif %}
-  {% endif %}
+      <small class="float-right">{{ post.date|date:"%Y-%m-%d" }}</small>
+    </h5>
+
+    <p>
+      {{ post.teaser }}
+    </p>
+  </li>
 {% endfor %}
+</ul>
 
-{% if colcount == 1 %}
-  </div>
-{% endif %}
-
-
-<div class="row">
-  <div class="col col-lg-6">
-    <ul class="pagination">
-      {% if paginator.previous_page %}
-        <li>
-          {% if paginator.previous_page == 1 %}
-            <a href="/blog/">&laquo;</a>
-          {% else %}
-            <a href="{{ paginator.previous_page_path }}">&laquo;</a>
-          {% endif %}
-        </li>
-      {% endif %}
-
-      {% if paginator.next_page %}
-        <li>
-          <a href="{{ paginator.next_page_path }}">&raquo;</a>
-        </li>
-      {% endif %}
-    </ul>
-  </div>
-</div>
+{% include pagination.html %}
