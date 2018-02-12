@@ -1,7 +1,7 @@
 permalink: pretty
-baseurl: "/"
+baseurl: ""
 
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-paginate
 
@@ -20,3 +20,10 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+
+sass:
+    sass_dir: static/css/_sass
+    style: compressed
+
+exclude:
+  - node_modules
