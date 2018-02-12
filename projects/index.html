@@ -3,3 +3,75 @@ layout: default
 title: Projects of Stefan Wehrmeyer
 
 ---
+
+<div class="container">
+
+  <h2>Projects</h2>
+
+  <p>These projects are my current focus.</p>
+
+  {% assign projects = site.projects | sort: 'date' | reverse %}
+  <div class="card-deck">
+    {% for project in projects %}
+      <div class="card">
+        {% if project.image %}
+          <a href="{{ project.url }}">
+            <img class="card-img-top" src="/static/img/projects/{{ project.image }}" alt="">
+          </a>
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="{{ project.url }}">{{ project.title }}</a>
+          </h5>
+          {% if project.description %}
+            <p class="card-text">
+              {{ project.description }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8">
+
+      <h3>Data investigations</h3>
+
+      <p>
+        During my time at <a href="https://correctiv.org/">correctiv.org</a> (2014-2017) I created database news apps, scraped and collected data, analyzed it for investigations, worked on the CMS and was responsible for digital security in the newsroom.
+      </p>
+      <p>
+        Here are some of the publications:
+      </p>
+      <ul>
+        <li>
+          <a href="https://correctiv.org/recherchen/wirtschaft/agrar/">
+            German Animal Farming and Farm Subsidies
+          </a>
+          – this investigation found that many intensive animal farms also receive farm subsidies despite their bad impact on the environment. My data analysis matched companies of two separate databases (E-PRTR and farm subsidies) and included nitrate ground water measurements in further reporting.
+        <li>
+          <a href="https://correctiv.org/recherchen/euros-fuer-aerzte/">
+            Euros for Doctors
+          </a>
+           – a database of payments from pharma companies to doctors for Germany, Austria and Switzerland. This included scraping, cleaning, deduplicating and analysing the dataset and building the web app with URLs for every doctor (<a href="https://github.com/correctiv/correctiv-eurosfueraerzte/">Code on GitHub</a>)
+        </li>
+        <li>
+          <a href="https://correctiv.org/recherchen/pflege/">
+            Nursing Homes Database
+          </a>
+          – a journalistic view on the nursing home score cards in a searchable database including a call to action for readers to requests non-public reports via fragdenstaat.de.
+          <a href="https://github.com/correctiv/correctiv-nursinghomes">Code on GitHub</a>)
+        </li>
+        <li>
+          <a href="https://correctiv.org/recherchen/spendengerichte/">
+            Court Donations
+          </a>
+          – Money collected by the judicial system is distributed without much oversight. Data was collected via FOI, <a href="https://correctiv.org/nerds/blog/2014/10/02/details-zur-justizgelder-datenbank/">cleaned and consolidated</a> and then put into a searchable database. (<a href="https://github.com/correctiv/correctiv-justizgelder">Code on GitHub</a>)
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</div>
